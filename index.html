@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CI-TECH Login</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+  <div class="title">CI-TECH</div>
+  <div class="logos">
+    <img src="logo1.png" alt="Logo 1" class="logo">
+    <img src="logo2.png" alt="Logo 2" class="logo">
+    <img src="logo3.png" alt="Logo 3" class="logo">
+  </div>
+</div>
+
+<div class="login-form">
+  <div class="login-header">
+		<header>Hello!</header>
+  </div>
+  <form id="loginForm">  <!-- Added ID for JavaScript -->
+    <input type="text" class="input" placeholder="username" id="username" name="username" required>
+    <input type="password" class="input" placeholder="password" id="password" name="password" required>
+    <button type="button" onclick="validateLogin()">Log In</button> <!-- Changed to button type and added onclick -->
+  </form>
+</div>
+
+<script>
+function validateLogin() {
+  const usernameInput = document.getElementById('username').value;
+  const passwordInput = document.getElementById('password').value;
+
+  if (usernameInput === 'kupal' && passwordInput === '1234') {
+    redirectToIndex();
+  } else {
+    // Login failed
+    alert('Invalid username or password.');
+  }
+}
+function redirectToIndex() {
+  window.location.href = 'login.html'; // Replace with your actual index page URL
+}
+</script>
+
+
+</body>
+</html>
